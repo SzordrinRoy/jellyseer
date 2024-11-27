@@ -1,0 +1,13 @@
+services:
+    jellyseerr:
+       image: fallenbagel/jellyseerr:latest
+       container_name: ${CONTAINER_NAME}
+       network_mode: bridge
+       cpu_shares: 1536
+       environment:
+            - TZ=USA/Chigaco
+       ports:
+            - 5055:5055
+       volumes:
+            - ${CONFIG_PATH}/jellyseerr:/app/config
+       restart: unless-stopped
