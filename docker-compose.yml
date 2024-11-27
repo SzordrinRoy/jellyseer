@@ -9,5 +9,5 @@ services:
        ports:
             - 5055:5055
        volumes:
-            - ${CONFIG_PATH}/jellyseerr:/app/config
+            - ${CONFIG_PATH}/${CONTAINER_NAME}:/app/config
        restart: unless-stopped
